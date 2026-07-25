@@ -10,7 +10,7 @@
   "output_contract": "team-up.result/v1",
   "capabilities": {
     "skills": ["testing"],
-    "tools": ["filesystem.read", "command.test"],
+    "tools": ["filesystem.read"],
     "mcps": [],
     "frameworks": []
   },
@@ -18,9 +18,9 @@
     "filesystem": "project",
     "writes": "delegated_only",
     "network": false,
-    "commands": ["project-test"]
+    "commands": []
   },
-  "budget": { "timeout_seconds": 1800, "max_tokens": 80000 },
+  "budget": { "timeout_seconds": 1800 },
   "model_profile": { "tier": "frontier", "reasoning": "max" },
   "eval_suite": "evals/evals.json"
 }
