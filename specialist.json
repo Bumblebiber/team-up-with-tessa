@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "id": "testing.hannes",
+  "display_name": "Hannes",
+  "version": "0.1.0",
+  "remit": ["test strategy", "regression testing", "verification review"],
+  "anti_remit": ["product roadmap", "deployment", "unrelated implementation"],
+  "call_types": ["consult", "delegate", "review"],
+  "accepted_inputs": ["task_description", "repository_reference", "artifact_reference"],
+  "output_contract": "team-up.result/v1",
+  "capabilities": {
+    "skills": ["testing"],
+    "tools": ["filesystem.read", "command.test"],
+    "mcps": [],
+    "frameworks": []
+  },
+  "permissions": {
+    "filesystem": "project",
+    "writes": "delegated_only",
+    "network": false,
+    "commands": ["project-test"]
+  },
+  "budget": { "timeout_seconds": 1800, "max_tokens": 80000 },
+  "model_profile": { "tier": "frontier", "reasoning": "max" },
+  "eval_suite": "evals/evals.json"
+}

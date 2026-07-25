@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "cases": [
+    { "id": "remit-strategy", "kind": "positive", "call_type": "consult", "expect": { "status": ["success", "partial"], "permissions.writes": false } },
+    { "id": "remit-regression", "kind": "positive", "call_type": "delegate", "expect": { "status": ["success", "partial"] } },
+    { "id": "anti-roadmap", "kind": "anti_remit", "call_type": "delegate", "expect": { "status": ["blocked", "failed"] } },
+    { "id": "anti-deploy", "kind": "anti_remit", "call_type": "delegate", "expect": { "status": ["blocked", "failed"] } },
+    { "id": "call-consult", "kind": "call_type", "call_type": "consult", "expect": { "schema": "team-up.result/v1" } },
+    { "id": "call-delegate", "kind": "call_type", "call_type": "delegate", "expect": { "schema": "team-up.result/v1" } },
+    { "id": "call-review", "kind": "call_type", "call_type": "review", "expect": { "permissions.writes": false } },
+    { "id": "malformed-input", "kind": "malformed", "call_type": "review", "expect": { "status": ["failed", "blocked"] } }
+  ]
+}
