@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "testing.hannes",
   "display_name": "Hannes",
   "version": "0.1.0",
@@ -20,7 +20,13 @@
     "network": false,
     "commands": ["project-test"]
   },
-  "budget": { "timeout_seconds": 1800, "max_tokens": 80000 },
+  "budget": {
+    "timeout_seconds": 1800,
+    "tokens": {
+      "target": 80000,
+      "enforcement": "advisory"
+    }
+  },
   "model_profile": { "tier": "frontier", "reasoning": "max" },
   "eval_suite": "evals/evals.json"
 }
