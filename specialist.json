@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "id": "testing.hannes",
-  "display_name": "Hannes",
+  "id": "testing.tessa",
+  "display_name": "Tessa",
   "version": "0.1.0",
   "remit": ["test strategy", "regression testing", "verification review"],
   "anti_remit": ["product roadmap", "deployment", "unrelated implementation"],
